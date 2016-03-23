@@ -30,9 +30,11 @@
     
     _type = LookType_News;
     
-    [self.followBtn addTarget:self action:@selector(cmdChoice:) forControlEvents:UIControlEventTouchUpInside];
+    SEL sector = @selector(cmdChoice:);
     
-    [self.newsBtn addTarget:self action:@selector(cmdChoice:) forControlEvents:UIControlEventTouchUpInside];
+    [self.followBtn addTarget:self action:sector forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.newsBtn addTarget:self action:sector forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)cmdChoice:(UIButton *)btn
