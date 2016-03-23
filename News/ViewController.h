@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSUInteger,LookType) {
+    LookType_News,
+    LookType_Follow
+};
+
 @interface ViewController : UIViewController
 
 
