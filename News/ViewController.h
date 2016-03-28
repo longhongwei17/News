@@ -6,14 +6,14 @@
 //  Copyright © 2016年 longhongwei. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
 typedef NS_ENUM(NSUInteger,LookType) {
     LookType_News,
     LookType_Follow
 };
 
-@interface ViewController : UIViewController
+@interface ViewController : BaseViewController
 
 
 @end

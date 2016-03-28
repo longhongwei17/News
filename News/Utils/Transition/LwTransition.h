@@ -7,7 +7,28 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "LwDetectScrollViewEndGestureRecognizer.h"
 
-@interface LwTransition : NSObject
+@interface LwTransition :UIPercentDrivenInteractiveTransition <UIViewControllerTransitioningDelegate,UIViewControllerAnimatedTransitioning,UIGestureRecognizerDelegate>
+
+@property (nonatomic, getter=isDragable) BOOL dragable;
+
+@property (nonatomic, readonly)LwDetectScrollViewEndGestureRecognizer *gesture;
+
+@property (nonatomic, assign) UIGestureRecognizer *gestureRecognizerToFailPan;
+
+@property (nonatomic) BOOL bounces;
+
+@property (nonatomic) CGFloat behindViewScale;
+
+@property (nonatomic) CGFloat behindViewAlpha;
+
+@property (nonatomic) CGFloat transitionDuration;
+
+
+- (instancetype)initWithModalViewController:(UIViewController *)modalViewController;
+
+- (void)setContentScrollView:(UIScrollView *)scrollView;
 
 @end

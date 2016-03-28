@@ -20,6 +20,10 @@
 		54EEFF1E1CA2D19F00B5A96C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54EEFF1C1CA2D19F00B5A96C /* LaunchScreen.storyboard */; };
 		54EEFF291CA2D19F00B5A96C /* NewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EEFF281CA2D19F00B5A96C /* NewsTests.m */; };
 		54EEFF341CA2D19F00B5A96C /* NewsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EEFF331CA2D19F00B5A96C /* NewsUITests.m */; };
+		54FC924E1CA9574B00DB30E0 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FC924D1CA9574B00DB30E0 /* BaseViewController.m */; };
+		54FC92511CA957E200DB30E0 /* LwDetectScrollViewEndGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FC92501CA957E200DB30E0 /* LwDetectScrollViewEndGestureRecognizer.m */; };
+		54FC92591CA9691600DB30E0 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FC92571CA9691600DB30E0 /* NewsDetailViewController.m */; };
+		54FC925A1CA9691600DB30E0 /* NewsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54FC92581CA9691600DB30E0 /* NewsDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,13 @@
 		54EEFF2F1CA2D19F00B5A96C /* NewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54EEFF331CA2D19F00B5A96C /* NewsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsUITests.m; sourceTree = "<group>"; };
 		54EEFF351CA2D19F00B5A96C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54FC924C1CA9574B00DB30E0 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		54FC924D1CA9574B00DB30E0 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		54FC924F1CA957E200DB30E0 /* LwDetectScrollViewEndGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LwDetectScrollViewEndGestureRecognizer.h; sourceTree = "<group>"; };
+		54FC92501CA957E200DB30E0 /* LwDetectScrollViewEndGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LwDetectScrollViewEndGestureRecognizer.m; sourceTree = "<group>"; };
+		54FC92561CA9691600DB30E0 /* NewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetailViewController.h; sourceTree = "<group>"; };
+		54FC92571CA9691600DB30E0 /* NewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailViewController.m; sourceTree = "<group>"; };
+		54FC92581CA9691600DB30E0 /* NewsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +107,7 @@
 		541E1A6A1CA2E89E00D6C989 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				54FC92521CA9624800DB30E0 /* DetailNews */,
 				541E1A6C1CA2E8C900D6C989 /* Main */,
 			);
 			path = Module;
@@ -153,6 +165,8 @@
 			children = (
 				541E1A7D1CA2EA0700D6C989 /* LwTransition.h */,
 				541E1A7E1CA2EA0700D6C989 /* LwTransition.m */,
+				54FC924F1CA957E200DB30E0 /* LwDetectScrollViewEndGestureRecognizer.h */,
+				54FC92501CA957E200DB30E0 /* LwDetectScrollViewEndGestureRecognizer.m */,
 			);
 			path = Transition;
 			sourceTree = "<group>";
@@ -180,6 +194,7 @@
 		54EEFF0D1CA2D19F00B5A96C /* News */ = {
 			isa = PBXGroup;
 			children = (
+				54FC924A1CA9571900DB30E0 /* Common */,
 				541E1A6B1CA2E8C000D6C989 /* Utils */,
 				541E1A6A1CA2E89E00D6C989 /* Module */,
 				54EEFF111CA2D19F00B5A96C /* AppDelegate.h */,
@@ -219,6 +234,57 @@
 				54EEFF351CA2D19F00B5A96C /* Info.plist */,
 			);
 			path = NewsUITests;
+			sourceTree = "<group>";
+		};
+		54FC924A1CA9571900DB30E0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				54FC924B1CA9573000DB30E0 /* Base */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		54FC924B1CA9573000DB30E0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				54FC924C1CA9574B00DB30E0 /* BaseViewController.h */,
+				54FC924D1CA9574B00DB30E0 /* BaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		54FC92521CA9624800DB30E0 /* DetailNews */ = {
+			isa = PBXGroup;
+			children = (
+				54FC92531CA968FC00DB30E0 /* Model */,
+				54FC92541CA968FC00DB30E0 /* ViewController */,
+				54FC92551CA968FC00DB30E0 /* Views */,
+			);
+			path = DetailNews;
+			sourceTree = "<group>";
+		};
+		54FC92531CA968FC00DB30E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		54FC92541CA968FC00DB30E0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				54FC92561CA9691600DB30E0 /* NewsDetailViewController.h */,
+				54FC92571CA9691600DB30E0 /* NewsDetailViewController.m */,
+				54FC92581CA9691600DB30E0 /* NewsDetailViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		54FC92551CA968FC00DB30E0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,6 +390,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54FC925A1CA9691600DB30E0 /* NewsDetailViewController.xib in Resources */,
 				54EEFF1E1CA2D19F00B5A96C /* LaunchScreen.storyboard in Resources */,
 				54EEFF1B1CA2D19F00B5A96C /* Assets.xcassets in Resources */,
 				54EEFF191CA2D19F00B5A96C /* Main.storyboard in Resources */,
@@ -352,11 +419,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				54EEFF161CA2D19F00B5A96C /* ViewController.m in Sources */,
+				54FC924E1CA9574B00DB30E0 /* BaseViewController.m in Sources */,
 				541E1A781CA2E8C900D6C989 /* FollowVC.m in Sources */,
 				541E1A7B1CA2E8C900D6C989 /* NewSelectView.m in Sources */,
+				54FC92591CA9691600DB30E0 /* NewsDetailViewController.m in Sources */,
 				541E1A7A1CA2E8C900D6C989 /* NavBarView.m in Sources */,
 				54EEFF131CA2D19F00B5A96C /* AppDelegate.m in Sources */,
 				541E1A791CA2E8C900D6C989 /* NewsVC.m in Sources */,
+				54FC92511CA957E200DB30E0 /* LwDetectScrollViewEndGestureRecognizer.m in Sources */,
 				54EEFF101CA2D19F00B5A96C /* main.m in Sources */,
 				541E1A7F1CA2EA0700D6C989 /* LwTransition.m in Sources */,
 			);

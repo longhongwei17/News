@@ -6,8 +6,8 @@
 //  Copyright © 2016年 longhongwei. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface NewsVC : UIViewController
+@interface NewsVC : BaseViewController
 
 @end

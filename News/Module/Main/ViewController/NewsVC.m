@@ -7,6 +7,7 @@
 //
 
 #import "NewsVC.h"
+#import "NewsDetailViewController.h"
 
 @interface NewsVC ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -26,6 +27,8 @@ static NSString * const cellIdentifier = @"cellIdentifier";
     
     [self initUI];
 }
+
+
 
 - (void)initUI
 {
@@ -64,7 +67,12 @@ static NSString * const cellIdentifier = @"cellIdentifier";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    NewsDetailViewController *newDetailVC = [[NewsDetailViewController alloc] initWithNibName:NSStringFromClass([NewsDetailViewController class]) bundle:nil];
+    
+    [self.parentViewController presentViewController:[[UINavigationController alloc] initWithRootViewController:newDetailVC] animated:YES completion:nil];
 }
+
 
 - (void)didReceiveMemoryWarning
 {

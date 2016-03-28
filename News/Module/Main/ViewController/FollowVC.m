@@ -7,6 +7,7 @@
 //
 
 #import "FollowVC.h"
+#import "NewsDetailViewController.h"
 
 @interface FollowVC ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -31,6 +32,7 @@ static NSString * const cellIdentifier = @"cellIdentifier";
 {
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
 }
+
 
 
 
@@ -67,6 +69,10 @@ static NSString * const cellIdentifier = @"cellIdentifier";
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    
+    NewsDetailViewController *newDetailVC = [[NewsDetailViewController alloc] initWithNibName:NSStringFromClass([NewsDetailViewController class]) bundle:nil];
+    
+    [self.parentViewController presentViewController:[[UINavigationController alloc] initWithRootViewController:newDetailVC] animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

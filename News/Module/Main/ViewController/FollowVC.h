@@ -6,8 +6,7 @@
 //  Copyright © 2016年 longhongwei. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
-@interface FollowVC : UIViewController
+#import "BaseViewController.h"
+@interface FollowVC : BaseViewController
 
 @end
