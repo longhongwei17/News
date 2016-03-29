@@ -33,16 +33,13 @@ static NSString * const cellIdentifier = @"cellIdentifier";
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
 }
 
-
-
-
 #pragma mark - getters
 
 - (NSMutableArray *)dataList
 {
     if (!_dataList) {
         _dataList = [NSMutableArray array];
-        for (NSInteger index = 0; index < 20; index ++) {
+        for (NSInteger index = 0; index < 6; index ++) {
             [_dataList addObject:[NSString stringWithFormat:@" follow S %@",@(index)]];
         }
     }

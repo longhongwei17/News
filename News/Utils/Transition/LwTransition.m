@@ -26,7 +26,6 @@
 
 @end
 
-
 @implementation LwTransition
 
 - (instancetype)initWithModalViewController:(UIViewController *)modalViewController
@@ -278,7 +277,7 @@
     [UIView animateWithDuration:0.25 delay:.0f options:UIViewAnimationOptionCurveEaseInOut animations:^{
         CGFloat scaleBack = (1 / self.behindViewScale);
         toViewController.view.layer.transform = CATransform3DScale(self.tmpTransform, scaleBack, scaleBack, 1);
-        toViewController.view.alpha = 1.0f;
+                toViewController.view.alpha = 1.0f;
         fromViewController.view.frame = endRect;
     } completion:^(BOOL finished) {
         if (fromViewController.modalPresentationStyle == UIModalPresentationCustom) {
@@ -311,8 +310,6 @@
     }];
 }
  
- 
-
 
 #pragma mark - UIViewControllerTransitioningDelegate Methods
 

@@ -29,13 +29,11 @@
 {
     
     UIViewController *modalVC = viewControllerToPresent;
-
     modalVC.modalPresentationStyle = UIModalPresentationFullScreen;
-    
     self.animator = [[LwTransition alloc] initWithModalViewController:modalVC];
     self.animator.dragable = YES;
     self.animator.bounces = NO;
-    self.animator.behindViewAlpha = 0.5f;
+    self.animator.behindViewAlpha = 0.3f;
     self.animator.behindViewScale = 0.9;
     self.animator.transitionDuration = 0.3f;
     
@@ -48,6 +46,8 @@
 
     [super presentViewController:viewControllerToPresent animated:flag completion:completion];
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {

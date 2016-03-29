@@ -29,7 +29,6 @@ static NSString * const cellIdentifier = @"cellIdentifier";
 }
 
 
-
 - (void)initUI
 {
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
@@ -41,7 +40,7 @@ static NSString * const cellIdentifier = @"cellIdentifier";
 {
     if (!_dataList) {
         _dataList = [NSMutableArray array];
-        for (NSInteger index = 0; index < 20; index ++) {
+        for (NSInteger index = 0; index < 5; index ++) {
             [_dataList addObject:[NSString stringWithFormat:@"new s %@",@(index)]];
         }
     }

@@ -21,6 +21,13 @@
     self.view.backgroundColor = [UIColor purpleColor];
     
     self.title = @"新闻详情";
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(cmdDismiss:)];
+}
+
+- (void)cmdDismiss:(id)sender
+{
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

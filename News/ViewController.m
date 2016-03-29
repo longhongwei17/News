@@ -29,6 +29,12 @@
     [self initUI];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+}
+
 - (void)initUI
 {
     self.curType = LookType_News;
